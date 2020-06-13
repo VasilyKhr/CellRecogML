@@ -1,0 +1,119 @@
+rule #1
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#fff2cb")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor == null
+  then
+    set tag "STUB" to c1
+end
+
+rule #2
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#fff2cb")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor != null, !style.fgColor.equals("#70ad47")
+  then
+    set tag "STUB" to c1
+end
+
+rule #3
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#fff2cb"), !blank
+  then
+    set tag "STUB" to c
+end
+
+rule #4
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#ffe598")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor == null
+  then
+    set tag "STUB1" to c1
+end
+
+rule #5
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#ffe598")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor != null, !style.fgColor.equals("#70ad47")
+  then
+    set tag "STUB1" to c1
+end
+
+rule #6
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#ffe598"), !blank
+  then
+    set tag "STUB1" to c
+end
+
+rule #7
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#ffd965")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor == null
+  then
+    set tag "STUB2" to c1
+end
+
+rule #8
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#ffd965")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor != null, !style.fgColor.equals("#70ad47")
+  then
+    set tag "STUB2" to c1
+end
+
+rule #9
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#ffd965"), !blank
+  then
+    set tag "STUB2" to c
+end
+
+rule #10
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#bf900")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor == null
+  then
+    set tag "STUB3" to c1
+end
+
+rule #11
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#bf900")
+    cell c1: cl >= c.cl, cr <= c.cr, rt > c.rb, !blank, style.fgColor != null, !style.fgColor.equals("#70ad47")
+  then
+    set tag "STUB3" to c1
+end
+
+rule #12
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#bf900"), !blank
+  then
+    set tag "STUB3" to c
+end
+
+rule #13
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#fbe4d5"), !blank
+  then
+    set tag "HEAD" to c
+end
+
+rule #14
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#e2eeda"), !blank
+  then
+    set tag "CURRENCY" to c
+end
+
+rule #15
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#70ad47"), !blank
+  then
+    set tag "CURRENCY" to c
+end
+
+rule #16
+  when
+    cell c: style.fgColor != null, style.fgColor.equals("#e7e6e6"), !blank
+  then
+    set tag "DATA" to c
+end
